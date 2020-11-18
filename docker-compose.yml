@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    container_name: web_app
+    ports:
+    - "8080:80"
+    volumes:
+    - ./htdocs:/var/www/html
+    tty: true
+    stdin_open: true
